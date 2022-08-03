@@ -1,18 +1,14 @@
 import React from "react";
+import PhotoList from "../PhotoList";
 import { capitalizeFirstLetter } from "../../utils/helpers";
-import photo from "../../assets/images/project1.png";
 
 function Gallery(props) {
-  const currentLink = {
-    name: "portfolio",
-  };
+  const { currentLink } = props;
   return (
     <section>
-      <h1>{capitalizeFirstLetter(currentLink.name)}</h1>
-      <p>{currentLink.name}</p>
-      <div className="flex-row">
-        <img src={photo} alt="project 1" className="img-thumbnail mx-1" />
-      </div>
+      <h1 data-testid="h1tag">{capitalizeFirstLetter(currentLink.name)}</h1>
+      <p>{currentLink.description}</p>
+      <PhotoList Navlink={currentLink.name} />
     </section>
   );
 }
