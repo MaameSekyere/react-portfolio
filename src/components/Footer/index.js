@@ -6,38 +6,38 @@ function Footer() {
       <div className="section-title-primary"></div>
       <div className="contact-container">
         <div className="contact-icons">
-          <p>
-            Github:
+          <div>
             <a
               href="https://github.com/maamesekyere"
               target="_blank"
               rel="noreferrer"
-              title="Github Link"
+              title="Github"
             >
-              <i className="fab fa-github"></i>
+              {" "}
+              Github
             </a>
-          </p>
+          </div>
         </div>
         <div className="contact-icons">
-          <p>
-            LinkedIn:
+          <div className="contact-icons">
             <a
               href="linkedin.com/in/maame-a-sekyere-4a4719103"
               target="_blank"
               rel="noreferrer"
-              title="LinkedIn Link"
+              title="LinkedIn"
             >
-              <i className="fab fa-linkedin-in"></i>
+              {" "}
+              LinkedIn
             </a>
-          </p>
+          </div>
         </div>
         <div className="contact-icons">
-          <p>
-            Email:
-            <a href="mailto:maameant@gmail.com" title="Email Link">
-              <i className="fas fa-paper-plane"></i>
+          <div>
+            <a href="mailto:maameant@gmail.com" title="Email">
+              {" "}
+              Email
             </a>
-          </p>
+          </div>
         </div>
       </div>
     </section>
