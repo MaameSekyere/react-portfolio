@@ -53,3 +53,7 @@ WHEN I view the footer
 THEN I am presented with text or icon links to the developer’s GitHub and LinkedIn profiles, and their profile on a third platform (Stack Overflow, Twitter)
 
 Screenshots
+<img width="1440" alt="Screen Shot 2022-08-05 at 1 20 28 AM" src="https://user-images.githubusercontent.com/94888460/183007248-f4f1c7f5-f642-44fe-8183-2207aca685bf.png">
+
+<img width="1440" alt="Screen Shot 2022-08-05 at 1 21 09 AM" src="https://user-images.githubusercontent.com/94888460/183007263-614fe4aa-9079-431a-bc7d-782ee5509a10.png">
+<img width="1440" alt="Screen Shot 2022-08-05 at 1 21 51 AM" src="https://user-images.githubusercontent.com/94888460/183007281-1bfa5120-781a-4113-bfbf-2fb19ea25652.png">
