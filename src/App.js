@@ -4,33 +4,37 @@ import About from "./components/About";
 import Gallery from "./components/Gallery";
 import ContactForm from "./components/Contact";
 import "./App.css";
+import Footer from "./components/Footer";
 
 function App() {
-  const [NavLinks] = useState([{ name: "portfolio", description: " photos" }]);
+  const [NavLinks] = useState([
+    { name: "portfolio", description: "" },
+    { name: "contact", description: "contact" },
+    { name: "about me", description: "about me" },
+  ]);
 
   const [currentLink, setCurrentLink] = useState(NavLinks[0]);
+  console.log(currentLink);
 
-  const [contactSelected, setContactSelected] = useState(false);
+  const render = () => {
+    if (currentLink.name === "about me") {
+      return <About></About>;
+    }
+    if (currentLink.name === "contact") {
+      return <ContactForm></ContactForm>;
+    }
+    return <Gallery currentLink={currentLink}></Gallery>;
+  };
 
   return (
     <div>
-      <Navigation>
+      <Navigation
         NavLinks={NavLinks}
         setCurrentLink={setCurrentLink}
         currentLink={currentLink}
-        contactSelected={contactSelected}
-        setContactSelected={setContactSelected}
-      </Navigation>
-      <main>
-        {!contactSelected ? (
-          <>
-            <Gallery currentLink={currentLink}></Gallery>
-            <About></About>
-          </>
-        ) : (
-          <ContactForm></ContactForm>
-        )}
-      </main>
+      />
+      <main>{render()}</main>
+      <Footer></Footer>
     </div>
   );
 }

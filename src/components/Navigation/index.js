@@ -2,16 +2,13 @@ import React, { useEffect } from "react";
 import { capitalizeFirstLetter } from "../../utils/helpers";
 
 function Navigation(props) {
-  const {
-    NavLinks = [],
-    setCurrentLink,
-    contactSelected,
-    setContactSelected,
-    currentLink,
-  } = props;
+  const { NavLinks = [], setCurrentLink, currentLink } = props;
 
   useEffect(() => {
-    document.title = capitalizeFirstLetter(currentLink.name);
+    if (currentLink) {
+      document.title = capitalizeFirstLetter(currentLink.name);
+    }
+    console.log(currentLink);
   }, [currentLink]);
 
   return (
@@ -27,33 +24,17 @@ function Navigation(props) {
             <a
               data-testid="about"
               href="#about"
-              onClick={() => setContactSelected(false)}
+              onClick={() => setCurrentLink(NavLinks[2])}
             >
               About Me
             </a>
           </li>
-          <li className={`mx-2 ${contactSelected && "navActive"}`}>
-            <span onClick={() => setContactSelected(true)}>Contact</span>
+          <li className={`mx-2 ${"navActive"}`}>
+            <span onClick={() => setCurrentLink(NavLinks[1])}>Contact</span>
           </li>
-          {NavLinks.map((Navlink) => (
-            <li
-              className={`mx-1 ${
-                currentLink.name === Navlink.name &&
-                !contactSelected &&
-                "navActive"
-              }`}
-              key={Navlink.name}
-            >
-              <span
-                onClick={() => {
-                  setCurrentLink(Navlink);
-                  setContactSelected(false);
-                }}
-              >
-                {capitalizeFirstLetter(Navlink.name)}
-              </span>
-            </li>
-          ))}
+          <li className={`mx-2 ${"navActive"}`}>
+            <span onClick={() => setCurrentLink(NavLinks[0])}>Portfolio</span>
+          </li>
         </ul>
       </nav>
     </header>

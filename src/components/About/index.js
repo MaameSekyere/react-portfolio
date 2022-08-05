@@ -1,5 +1,5 @@
 import React from "react";
-import bgImage from "../../assets/images/bg.png";
+import bgImage from "../../assets/images/BgImage.jpg";
 
 function About() {
   return (
