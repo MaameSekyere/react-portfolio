@@ -1,10 +1,10 @@
 import React from "react";
-import bgImage from "../../assets/images/BgImage.jpg";
+import bgImage from "../../assets/images/bg1.jpg";
 
 function About() {
   return (
     <section className="my-5">
-      <img src={bgImage} className="my-2" style={{ width: "50%" }} alt="bg" />
+      <img src={bgImage} className="my-2" style={{ width: "100%" }} alt="bg" />
       <div className="about-text">
         <p>
           Hi! I'm Maame👋🏾 I have a passion for learning new skills and have
